@@ -82,18 +82,25 @@ def solve_p1():
         linea = linea.rstrip()
         if linea.split(':')[0] == 'seed-to-soil map':
             soils = obtener_mapeo(seeds, input_file)
+            print('-')
         elif linea.split(':')[0] == 'soil-to-fertilizer map':
             fertilizers = obtener_mapeo(soils, input_file)
+            print('-')
         elif linea.split(':')[0] == 'fertilizer-to-water map':
             waters = obtener_mapeo(fertilizers, input_file)
+            print('-')
         elif linea.split(':')[0] == 'water-to-light map':
             lights = obtener_mapeo(waters, input_file)
+            print('-')
         elif linea.split(':')[0] == 'light-to-temperature map':
             temperatures = obtener_mapeo(lights, input_file)
+            print('-')
         elif linea.split(':')[0] == 'temperature-to-humidity map':
             humidities = obtener_mapeo(temperatures, input_file)
+            print('-')
         elif linea.split(':')[0] == 'humidity-to-location map':
             locations = obtener_mapeo(humidities, input_file)
+            print('-')
         else:
             continue
     print(min(locations))
